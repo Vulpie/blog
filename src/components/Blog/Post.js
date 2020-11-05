@@ -1,12 +1,18 @@
 import React from 'react'
 
 const Post = ({ post }) => {
-	const { title, excerpt } = post
+	const { title, content } = post
 	return (
-		<div>
-			<h4 dangerouslySetInnerHTML={{ __html: title.rendered }} />
+		<div className="blog__post">
+			<h4
+				dangerouslySetInnerHTML={{ __html: title.rendered }}
+				className="blog__post_title"
+			/>
 
-			<p dangerouslySetInnerHTML={{ __html: excerpt.rendered }} />
+			<div
+				dangerouslySetInnerHTML={{ __html: content.rendered }}
+				className="blog__post_title"
+			/>
 		</div>
 	)
 }

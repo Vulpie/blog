@@ -1,0 +1,8 @@
+@mixin blog-main {
+	.blog {
+		width: 70%;
+		&__post {
+			border: 1px solid black;
+		}
+	}
+}

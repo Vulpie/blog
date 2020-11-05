@@ -6,16 +6,19 @@ const Blog = () => {
 	useEffect(() => {
 		fetch('http://localhost/vulpieblog/wp-json/wp/v2/posts')
 			.then((res) => res.json())
-			.then((data) => setBlog(data))
+			.then((data) => {
+				setBlog(data)
+				console.log(data)
+			})
 	}, [])
 	return (
-		<>
+		<div className="blog">
 			{blog.length !== 0 ? (
 				blog.map((post) => <Post post={post} key={'post_' + post.id} />)
 			) : (
 				<p>No posts</p>
 			)}
-		</>
+		</div>
 	)
 }
 

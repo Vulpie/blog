@@ -1,0 +1,8 @@
+@use './variables';
+
+@mixin navbar-main {
+	.navbar {
+		width: 100%;
+		background-color: variables.$main;
+	}
+}
