@@ -4,7 +4,7 @@ import Post from './Post'
 const Blog = () => {
 	const [blog, setBlog] = useState([])
 	useEffect(() => {
-		fetch('http://localhost/vulpieblog/wp-json/wp/v2/posts')
+		fetch('/posts')
 			.then((res) => res.json())
 			.then((data) => {
 				setBlog(data)

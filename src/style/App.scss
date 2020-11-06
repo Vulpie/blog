@@ -1,4 +1,5 @@
 @use 'views/blog';
+@use 'views/contact';
 @use 'partials/navbar';
 
 .App {
@@ -6,7 +7,9 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	overflow-x: hidden;
 }
 
 @include navbar.navbar-main;
 @include blog.blog-main;
+@include contact.contact-main;

@@ -2,7 +2,25 @@
 
 @mixin navbar-main {
 	.navbar {
+		box-sizing: border-box;
 		width: 100%;
 		background-color: variables.$main;
+		display: flex;
+		flex-direction: row;
+		height: 50px;
+		align-items: center;
+		padding: 0 5px;
+
+		&__link {
+			text-decoration: none;
+			color: variables.$text;
+			font-size: 1.4rem;
+			font-weight: 700;
+			padding: 0 5px;
+			border-left: 1px solid black;
+		}
+		&__link:hover {
+			color: variables.$text-hover;
+		}
 	}
 }

@@ -4,7 +4,7 @@ import GalleryImage from './GalleryImage'
 const Gallery = () => {
 	const [gallery, setGallery] = useState([])
 	useEffect(() => {
-		fetch('http://localhost/vulpieblog/wp-json/wp/v2/media')
+		fetch('/media')
 			.then((res) => res.json())
 			.then((data) => {
 				setGallery(data)
