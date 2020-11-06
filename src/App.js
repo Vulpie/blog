@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
 import Contact from './components/Contact/Contact'
 import Gallery from './components/Gallery/Gallery'
+import Page from './components/Page/Page'
 
 function App() {
 	return (
@@ -19,6 +20,9 @@ function App() {
 					</Route>
 					<Route path="/gallery" exact>
 						<Gallery />
+					</Route>
+					<Route path="/show/page/:id" exact>
+						<Page />
 					</Route>
 				</Switch>
 			</Router>
