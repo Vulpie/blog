@@ -9,6 +9,13 @@
 	flex-direction: column;
 	align-items: center;
 	overflow-x: hidden;
+	min-width: 100%;
+	min-height: 100%;
+	background-image: url('../assets/background.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
 }
 
 @include navbar.navbar-main;
