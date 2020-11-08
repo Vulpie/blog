@@ -2,6 +2,7 @@
 @use 'views/contact';
 @use 'partials/navbar';
 @use 'partials/loader';
+@use 'views/page';
 
 .App {
 	text-align: center;
@@ -23,3 +24,4 @@
 @include blog.blog-main;
 @include contact.contact-main;
 @include loader.loader;
+@include page.page-main;

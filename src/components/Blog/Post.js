@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import SmallLoader from '../Partials/SmallLoader'
 
 const Post = ({ post }) => {
-	const { title, content } = post
+	const { title, content, date } = post
 	const [author, setAuthor] = useState()
 	useEffect(() => {
 		fetch(`/users/${post.author}`)
@@ -27,6 +27,8 @@ const Post = ({ post }) => {
 				) : (
 					<SmallLoader />
 				)}
+				<p className="blog__post_footer_label">Published:</p>
+				<p className="blog__post_footer_author">{date}</p>
 			</div>
 		</div>
 	)
