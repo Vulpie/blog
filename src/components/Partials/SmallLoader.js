@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Loader = () => {
+const SmallLoader = () => {
 	return (
-		<div class="loader">
+		<div class="small-loader">
 			<div></div>
 			<div></div>
 			<div></div>
@@ -11,4 +11,4 @@ const Loader = () => {
 	)
 }
 
-export default Loader
+export default SmallLoader
