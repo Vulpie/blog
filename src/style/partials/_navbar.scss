@@ -3,6 +3,7 @@
 @mixin navbar-main {
 	.navbar {
 		box-sizing: border-box;
+		font-family: variables.$title-font;
 		width: 100%;
 		background-color: variables.$main;
 		display: flex;

@@ -13,18 +13,18 @@ const Page = () => {
 			})
 	}, [id])
 	return (
-		<div>
+		<>
 			{pageContent !== undefined ? (
 				<div
 					dangerouslySetInnerHTML={{
 						__html: pageContent.content.rendered,
 					}}
-					className="blog__post_title"
+					className="page"
 				/>
 			) : (
 				<p>No contact info provided</p>
 			)}
-		</div>
+		</>
 	)
 }
 
