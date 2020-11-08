@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Loader from '../Partials/Loader'
 import Post from './Post'
 
 const Blog = () => {
@@ -16,7 +17,7 @@ const Blog = () => {
 			{blog.length !== 0 ? (
 				blog.map((post) => <Post post={post} key={'post_' + post.id} />)
 			) : (
-				<p>No posts</p>
+				<Loader />
 			)}
 		</div>
 	)

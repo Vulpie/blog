@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Loader from '../Partials/Loader'
 import GalleryImage from './GalleryImage'
 
 const Gallery = () => {
@@ -22,7 +23,7 @@ const Gallery = () => {
 					/>
 				))
 			) : (
-				<p>No images</p>
+				<Loader />
 			)}
 		</div>
 	)

@@ -1,6 +1,7 @@
 @use 'views/blog';
 @use 'views/contact';
 @use 'partials/navbar';
+@use 'partials/loader';
 
 .App {
 	text-align: center;
@@ -13,3 +14,4 @@
 @include navbar.navbar-main;
 @include blog.blog-main;
 @include contact.contact-main;
+@include loader.loader;
