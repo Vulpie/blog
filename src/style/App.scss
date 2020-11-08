@@ -1,6 +1,6 @@
 @use 'views/blog';
 @use 'views/contact';
-@use 'partials/navbar';
+@use 'partials/header';
 @use 'partials/loader';
 @use 'views/page';
 
@@ -20,7 +20,7 @@
 	box-sizing: border-box;
 }
 
-@include navbar.navbar-main;
+@include header.header-main;
 @include blog.blog-main;
 @include contact.contact-main;
 @include loader.loader;

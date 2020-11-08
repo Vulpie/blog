@@ -19,26 +19,32 @@ const Navbar = () => {
 		console.log(links)
 	}, [])
 	return (
-		<div className="navbar">
-			<Link to="/" className="navbar__link">
-				Blog
-			</Link>
-			<Link to="/gallery" className="navbar__link">
-				Photo Gallery
-			</Link>
-			{links.length !== 0 ? (
-				links.map((page_details) => (
-					<Link
-						className="navbar__link"
-						to={`/show/page/${page_details.id}`}
-						key={'link_id_' + page_details.id}
-					>
-						{page_details.title.rendered}
-					</Link>
-				))
-			) : (
-				<span></span>
-			)}
+		<div className="header">
+			<div className="header__navbar">
+				<Link to="/" className="header__navbar_link">
+					Blog
+				</Link>
+				<Link to="/gallery" className="header__navbar_link">
+					Photo Gallery
+				</Link>
+				{links.length !== 0 ? (
+					links.map((page_details) => (
+						<Link
+							className="header__navbar_link"
+							to={`/show/page/${page_details.id}`}
+							key={'link_id_' + page_details.id}
+						>
+							{page_details.title.rendered}
+						</Link>
+					))
+				) : (
+					<span></span>
+				)}
+			</div>
+
+			<div className="header__user">
+				<div className="header__user_login">Login</div>
+			</div>
 		</div>
 	)
 }

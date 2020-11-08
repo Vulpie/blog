@@ -1,0 +1,39 @@
+@use './variables';
+
+@mixin header-main {
+	.header {
+		box-sizing: border-box;
+		font-family: variables.$title-font;
+		width: 100%;
+		background-color: variables.$main;
+		display: flex;
+		flex-direction: row;
+		height: 50px;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 5px;
+		&__navbar {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			&_link {
+				text-decoration: none;
+				color: variables.$text;
+				font-size: 1.4rem;
+				font-weight: 700;
+				padding: 0 15px;
+			}
+			&_link:hover {
+				color: variables.$text-hover;
+				text-shadow: 2px 2px 2px white;
+			}
+		}
+		&__user {
+			&_login {
+				padding: 5px;
+				font-weight: 700;
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
