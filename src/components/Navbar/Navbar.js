@@ -6,7 +6,15 @@ const Navbar = () => {
 	useEffect(() => {
 		fetch('/pages')
 			.then((res) => res.json())
-			.then((data) => setLinks(data))
+			.then((data) => {
+				const main_links = []
+				data.forEach((item) => {
+					if (item.parent === 0) {
+						main_links.push(item)
+					}
+				})
+				setLinks(main_links)
+			})
 
 		console.log(links)
 	}, [])
