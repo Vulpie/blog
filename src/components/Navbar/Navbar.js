@@ -7,6 +7,8 @@ const Navbar = () => {
 		fetch('/pages')
 			.then((res) => res.json())
 			.then((data) => setLinks(data))
+
+		console.log(links)
 	}, [])
 	return (
 		<div className="navbar">
