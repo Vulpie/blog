@@ -43,7 +43,12 @@ const Navbar = () => {
 			</div>
 
 			<div className="header__user">
-				<div className="header__user_login">Login</div>
+				<Link to="/login" className="header__user_login">
+					Login
+				</Link>
+				<Link to="/register" className="header__user_login">
+					Register
+				</Link>
 			</div>
 		</div>
 	)

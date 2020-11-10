@@ -1,0 +1,33 @@
+@use '../variables';
+
+@mixin user-form {
+	.user-form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 40%;
+		&__label {
+			font-size: 1.2rem;
+			font-weight: 500;
+			margin: 5px 0;
+		}
+		&__input {
+			padding: 5px;
+			width: 50%;
+		}
+		&__input:hover {
+			box-shadow: 2px 2px 2px variables.$main-hover;
+		}
+		&__button {
+			margin: 15px 0;
+			padding: 10px 15px;
+			border-radius: 15px;
+			background-color: variables.$main;
+		}
+		&__button:hover {
+			background-color: variables.$main-hover;
+			cursor: pointer;
+		}
+	}
+}

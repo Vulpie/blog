@@ -3,6 +3,7 @@
 @use 'partials/header';
 @use 'partials/loader';
 @use 'views/page';
+@use 'partials/user-form';
 
 .App {
 	text-align: center;
@@ -25,3 +26,4 @@
 @include contact.contact-main;
 @include loader.loader;
 @include page.page-main;
+@include user-form.user-form;
