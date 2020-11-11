@@ -18,7 +18,7 @@ const Blog = () => {
 		setPage(page - 1)
 	}
 	useEffect(() => {
-		fetch(`/posts?page=${page}&per_page=4`)
+		fetch(`/wp-json/wp/v2/posts?page=${page}&per_page=4`)
 			.then((res) => res.json())
 			.then((data) => {
 				setBlog(data)

@@ -5,7 +5,7 @@ const Post = ({ post }) => {
 	const { title, content, date } = post
 	const [author, setAuthor] = useState()
 	useEffect(() => {
-		fetch(`/users/${post.author}`)
+		fetch(`/wp-json/wp/v2/users/${post.author}`)
 			.then((res) => res.json())
 			.then((data) => setAuthor(data))
 	}, [])
