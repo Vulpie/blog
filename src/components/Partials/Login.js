@@ -1,6 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
+import { UserContext } from '../../contexts/UserContext'
+import { AuthContext } from '../../contexts/AuthContext'
 
 const Login = () => {
+	const { setUser } = useContext(UserContext)
+	const { setIsAuthenticated } = useContext(AuthContext)
 	const handleSubmit = (e) => {
 		e.preventDefault()
 		const username = e.target['username'].value
@@ -20,6 +24,15 @@ const Login = () => {
 			.then((data) => {
 				localStorage.setItem('token', data.token)
 				console.log(data)
+				if (!data.token) {
+					throw 'There is no auth token'
+				}
+
+				setUser({
+					name: data.user_display_name,
+					email: data.user_email,
+				})
+				setIsAuthenticated(true)
 			})
 			.catch((err) => console.log(err))
 	}

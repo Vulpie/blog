@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { AuthContext } from '../../contexts/AuthContext'
+import NavbarUserDisplay from '../Partials/NavbarUserDisplay'
 
 const Navbar = () => {
 	const [links, setLinks] = useState([])
+	const { isAuthenticated } = useContext(AuthContext)
 	useEffect(() => {
 		fetch('/wp-json/wp/v2/pages')
 			.then((res) => res.json())
@@ -43,12 +46,18 @@ const Navbar = () => {
 			</div>
 
 			<div className="header__user">
-				<Link to="/login" className="header__user_login">
-					Login
-				</Link>
-				<Link to="/register" className="header__user_login">
-					Register
-				</Link>
+				{isAuthenticated ? (
+					<NavbarUserDisplay />
+				) : (
+					<>
+						<Link to="/login" className="header__user_login">
+							Login
+						</Link>
+						<Link to="/register" className="header__user_login">
+							Register
+						</Link>
+					</>
+				)}
 			</div>
 		</div>
 	)
