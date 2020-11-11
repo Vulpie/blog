@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { AuthContext } from '../../contexts/AuthContext'
+import LogoutButton from '../Partials/LogoutButton'
 import NavbarUserDisplay from '../Partials/NavbarUserDisplay'
 
 const Navbar = () => {
@@ -47,7 +48,10 @@ const Navbar = () => {
 
 			<div className="header__user">
 				{isAuthenticated ? (
-					<NavbarUserDisplay />
+					<>
+						<NavbarUserDisplay />
+						<LogoutButton />
+					</>
 				) : (
 					<>
 						<Link to="/login" className="header__user_login">

@@ -28,24 +28,28 @@ const Blog = () => {
 	return (
 		<div className="blog">
 			{blog.length !== 0 ? (
-				blog.map((post) => <Post post={post} key={'post_' + post.id} />)
+				<>
+					{blog.map((post) => (
+						<Post post={post} key={'post_' + post.id} />
+					))}
+					<div className="blog__pagination">
+						<div
+							className="blog__pagination_button"
+							onClick={() => prevPage()}
+						>
+							Previous
+						</div>
+						<div
+							className="blog__pagination_button"
+							onClick={() => nextPage()}
+						>
+							Next
+						</div>
+					</div>
+				</>
 			) : (
 				<Loader />
 			)}
-			<div className="blog__pagination">
-				<div
-					className="blog__pagination_button"
-					onClick={() => prevPage()}
-				>
-					Previous
-				</div>
-				<div
-					className="blog__pagination_button"
-					onClick={() => nextPage()}
-				>
-					Next
-				</div>
-			</div>
 		</div>
 	)
 }
