@@ -1,10 +1,15 @@
 import React, { useContext } from 'react'
 import { UserContext } from '../../contexts/UserContext'
 import { AuthContext } from '../../contexts/AuthContext'
+import { useHistory } from 'react-router-dom'
 
 const Login = () => {
+	const history = useHistory()
+	const redirectAfterLogin = () => {
+		history.push('/')
+	}
 	const { setUser } = useContext(UserContext)
-	const { setIsAuthenticated } = useContext(AuthContext)
+	const { setIsAuthenticated, isAuthenticated } = useContext(AuthContext)
 	const handleSubmit = (e) => {
 		e.preventDefault()
 		const username = e.target['username'].value
@@ -23,16 +28,19 @@ const Login = () => {
 			.then((res) => res.json())
 			.then((data) => {
 				localStorage.setItem('token', data.token)
+				const user = {
+					name: data.user_display_name,
+					email: data.user_email,
+				}
+				localStorage.setItem('user', JSON.stringify(user))
 				console.log(data)
 				if (!data.token) {
 					throw 'There is no auth token'
 				}
 
-				setUser({
-					name: data.user_display_name,
-					email: data.user_email,
-				})
+				setUser(user)
 				setIsAuthenticated(true)
+				redirectAfterLogin()
 			})
 			.catch((err) => console.log(err))
 	}
