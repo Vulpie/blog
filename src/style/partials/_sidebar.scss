@@ -1,33 +1,34 @@
-@use './variables';
+@use './settings';
 
-@mixin header-main {
-	.header {
-		position: absolute;
-		top: 0;
+@mixin sidebar {
+	.sidebar {
 		box-sizing: border-box;
-		font-family: variables.$title-font;
-		width: 100%;
-		background-color: variables.$main;
+		font-family: settings.$text__title-font;
+		width: 30%;
+		background-color: settings.$color__main;
 		display: flex;
-		flex-direction: row;
-		height: 50px;
+		flex-direction: column;
 		align-items: center;
 		justify-content: space-between;
 		padding: 0 5px;
+		height: 100vh;
+		position: fixed;
+		left: 0;
+		top: 0;
 
 		&__navbar {
 			display: flex;
-			flex-direction: row;
+			flex-direction: column;
 			align-items: center;
 			&_link {
 				text-decoration: none;
-				color: variables.$text;
+				color: settings.$color__text;
 				font-size: 1.4rem;
 				font-weight: 700;
 				padding: 0 15px;
 			}
 			&_link:hover {
-				color: variables.$text-hover;
+				color: settings.$color__text-hover;
 				text-shadow: 2px 2px 2px white;
 			}
 		}

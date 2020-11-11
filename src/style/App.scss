@@ -1,6 +1,5 @@
 @use 'views/blog';
-@use 'views/contact';
-@use 'partials/header';
+@use 'partials/sidebar';
 @use 'partials/loader';
 @use 'views/page';
 @use 'partials/user-form';
@@ -9,7 +8,7 @@
 .App {
 	text-align: center;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 	overflow-x: hidden;
@@ -23,9 +22,8 @@
 	box-sizing: border-box;
 }
 
-@include header.header-main;
+@include sidebar.sidebar;
 @include blog.blog-main;
-@include contact.contact-main;
 @include loader.loader;
 @include page.page-main;
 @include user-form.user-form;

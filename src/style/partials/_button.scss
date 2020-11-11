@@ -1,4 +1,4 @@
-@use '../variables';
+@use '../settings';
 
 @mixin button-partial {
 	.button {
@@ -12,13 +12,13 @@
 	}
 
 	.button--neutral {
-		background-color: variables.$main;
-		color: variables.$text;
+		background-color: settings.$color__main;
+		color: settings.$color__text;
 	}
 
 	.button--neutral:hover {
-		background-color: variables.$main-hover;
-		color: variables.$text-hover;
+		background-color: settings.$color__main-hover;
+		color: settings.$color__text-hover;
 	}
 
 	.button--negative {

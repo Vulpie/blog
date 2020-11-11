@@ -1,4 +1,4 @@
-@use '../variables';
+@use '../settings';
 
 @mixin user-form {
 	.user-form {
@@ -7,12 +7,12 @@
 		align-items: center;
 		justify-content: center;
 		width: 40%;
-		background-color: variables.$main;
+		background-color: settings.$color__main;
 		border-radius: 25px 0 25px 0;
 		&__header {
 			font-size: 1.6rem;
 			font-weight: 700;
-			font-family: variables.$title-font;
+			font-family: settings.$text__title-font;
 		}
 		&__label {
 			font-size: 1.2rem;
@@ -26,7 +26,7 @@
 			width: 50%;
 		}
 		&__input:hover {
-			box-shadow: 2px 2px 2px variables.$main-hover;
+			box-shadow: 2px 2px 2px settings.$color__main-hover;
 		}
 		&__button {
 			margin: 15px 0;
@@ -35,7 +35,7 @@
 			background-color: white;
 		}
 		&__button:hover {
-			background-color: variables.$main;
+			background-color: settings.$color__main;
 			box-shadow: 2px 2px 8px white;
 			color: white;
 			cursor: pointer;

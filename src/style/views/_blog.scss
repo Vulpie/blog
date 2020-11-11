@@ -1,17 +1,15 @@
-@use '../variables';
+@use '../settings';
 
 @mixin blog-main {
 	.blog {
-		padding-top: 50px;
-		width: 60%;
+		@include settings.main-display;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		min-height: 90vh;
 
 		&__post {
-			background-color: rgba(variables.$main, 0.7);
+			background-color: rgba(settings.$color__main, 0.7);
 			box-sizing: border-box;
 			border: 1px solid black;
 			width: 100%;
@@ -21,7 +19,7 @@
 			flex-direction: column;
 			align-items: center;
 			&_title {
-				font-family: variables.$title-font;
+				font-family: settings.$text__title-font;
 				font-size: 1.5rem;
 				font-weight: 700;
 			}

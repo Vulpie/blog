@@ -1,0 +1,17 @@
+/* Colors */
+$color__main: rgb(0, 153, 255);
+$color__main-hover: rgb(0, 119, 255);
+$color__text: rgb(8, 9, 73);
+$color__text-hover: rgb(8, 34, 73);
+
+/* Text */
+$text__title-font: 'Itim', cursive;
+
+/* Blocks */
+
+@mixin main-display {
+	width: 70%;
+	margin-left: 30%;
+	margin-right: 0;
+	min-height: 90vh;
+}

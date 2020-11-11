@@ -1,7 +1,7 @@
 @use '../settings';
 
-@mixin page-main {
-	.page {
+@mixin gallery {
+	.gallery {
 		@include settings.main-display;
 	}
 }

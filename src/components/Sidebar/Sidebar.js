@@ -4,7 +4,7 @@ import { AuthContext } from '../../contexts/AuthContext'
 import LogoutButton from '../Partials/LogoutButton'
 import NavbarUserDisplay from '../Partials/NavbarUserDisplay'
 
-const Navbar = () => {
+const Sidebar = () => {
 	const [links, setLinks] = useState([])
 	const { isAuthenticated } = useContext(AuthContext)
 	useEffect(() => {
@@ -23,18 +23,18 @@ const Navbar = () => {
 		console.log(links)
 	}, [])
 	return (
-		<div className="header">
-			<div className="header__navbar">
-				<Link to="/" className="header__navbar_link">
+		<div className="sidebar">
+			<div className="sidebar__navbar">
+				<Link to="/" className="sidebar__navbar_link">
 					Blog
 				</Link>
-				<Link to="/gallery" className="header__navbar_link">
+				<Link to="/gallery" className="sidebar__navbar_link">
 					Photo Gallery
 				</Link>
 				{links.length !== 0 ? (
 					links.map((page_details) => (
 						<Link
-							className="header__navbar_link"
+							className="sidebar__navbar_link"
 							to={`/show/page/${page_details.id}`}
 							key={'link_id_' + page_details.id}
 						>
@@ -46,7 +46,7 @@ const Navbar = () => {
 				)}
 			</div>
 
-			<div className="header__user">
+			<div className="sidebar__user">
 				{isAuthenticated ? (
 					<>
 						<NavbarUserDisplay />
@@ -54,10 +54,10 @@ const Navbar = () => {
 					</>
 				) : (
 					<>
-						<Link to="/login" className="header__user_login">
+						<Link to="/login" className="sidebar__user_login">
 							Login
 						</Link>
-						<Link to="/register" className="header__user_login">
+						<Link to="/register" className="sidebar__user_login">
 							Register
 						</Link>
 					</>
@@ -67,4 +67,4 @@ const Navbar = () => {
 	)
 }
 
-export default Navbar
+export default Sidebar
