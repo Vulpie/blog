@@ -4,6 +4,7 @@
 @use 'partials/loader';
 @use 'views/page';
 @use 'partials/user-form';
+@use 'partials/button';
 
 .App {
 	text-align: center;
@@ -28,3 +29,4 @@
 @include loader.loader;
 @include page.page-main;
 @include user-form.user-form;
+@include button.button-partial;

@@ -34,13 +34,13 @@ const Blog = () => {
 					))}
 					<div className="blog__pagination">
 						<div
-							className="blog__pagination_button"
+							className="button button--neutral"
 							onClick={() => prevPage()}
 						>
 							Previous
 						</div>
 						<div
-							className="blog__pagination_button"
+							className="button button--neutral"
 							onClick={() => nextPage()}
 						>
 							Next
