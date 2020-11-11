@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
 	const [links, setLinks] = useState([])
 	useEffect(() => {
-		fetch('/pages')
+		fetch('/wp-json/wp/v2/pages')
 			.then((res) => res.json())
 			.then((data) => {
 				const main_links = []

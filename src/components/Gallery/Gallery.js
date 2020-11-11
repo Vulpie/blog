@@ -5,7 +5,7 @@ import GalleryImage from './GalleryImage'
 const Gallery = () => {
 	const [gallery, setGallery] = useState([])
 	useEffect(() => {
-		fetch('/media')
+		fetch('/wp-json/wp/v2/media')
 			.then((res) => res.json())
 			.then((data) => {
 				setGallery(data)
