@@ -5,7 +5,7 @@ const Page = () => {
 	const [pageContent, setPageContent] = useState()
 	let { id } = useParams()
 	useEffect(() => {
-		fetch(`/pages/${id}`)
+		fetch(`/wp-json/wp/v2/pages/${id}`)
 			.then((res) => res.json())
 			.then((data) => {
 				setPageContent(data)

@@ -2,30 +2,31 @@
 
 @mixin sidebar {
 	.sidebar {
+		@include settings.side-display;
 		box-sizing: border-box;
 		font-family: settings.$text__title-font;
-		width: 30%;
-		background-color: settings.$color__main;
+		background-color: settings.$color__main-alpha;
 		display: flex;
-		flex-direction: column;
+		flex-direction: column-reverse;
 		align-items: center;
 		justify-content: space-between;
-		padding: 0 5px;
-		height: 100vh;
-		position: fixed;
-		left: 0;
-		top: 0;
+		padding: 20px 0;
+		color: settings.$color__text;
 
 		&__navbar {
+			width: 100%;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+
 			&_link {
 				text-decoration: none;
+				text-align: left;
 				color: settings.$color__text;
-				font-size: 1.4rem;
+				font-size: 1.5rem;
 				font-weight: 700;
-				padding: 0 15px;
+				padding: 10px 0;
+				width: 70%;
 			}
 			&_link:hover {
 				color: settings.$color__text-hover;
@@ -33,10 +34,16 @@
 			}
 		}
 		&__user {
-			&_login {
-				padding: 5px;
+			display: flex;
+			flex-direction: column;
+			&_link {
+				text-decoration: none;
+				text-align: left;
+				color: settings.$color__text;
+				font-size: 1.5rem;
 				font-weight: 700;
-				font-size: 1.2rem;
+				padding: 10px 0;
+				width: 70%;
 			}
 		}
 	}

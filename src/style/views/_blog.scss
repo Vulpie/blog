@@ -9,22 +9,29 @@
 		justify-content: center;
 
 		&__post {
-			background-color: rgba(settings.$color__main, 0.7);
+			background-color: settings.$color__main;
 			box-sizing: border-box;
 			border: 1px solid black;
-			width: 100%;
+			width: 60%;
 			margin: 10px 0;
 			padding: 5px;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			height: 25vh !important;
+			color: settings.$color__text;
+
 			&_title {
+				padding: 5px 0;
+				margin: 5px 0;
 				font-family: settings.$text__title-font;
 				font-size: 1.5rem;
 				font-weight: 700;
 			}
 			&_content {
 				padding: 5px 15px;
+				text-overflow: ellipsis;
+				overflow: hidden;
 			}
 			&_footer {
 				display: flex;

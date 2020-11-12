@@ -6,7 +6,7 @@ const Blog = () => {
 	const [blog, setBlog] = useState([])
 	const [page, setPage] = useState(1)
 	const nextPage = () => {
-		if (blog.length < 4) {
+		if (blog.length < 3) {
 			return
 		}
 		setPage(page + 1)
@@ -18,7 +18,7 @@ const Blog = () => {
 		setPage(page - 1)
 	}
 	useEffect(() => {
-		fetch(`/wp-json/wp/v2/posts?page=${page}&per_page=4`)
+		fetch(`/wp-json/wp/v2/posts?page=${page}&per_page=3`)
 			.then((res) => res.json())
 			.then((data) => {
 				setBlog(data)

@@ -4,8 +4,10 @@
 @use 'views/page';
 @use 'partials/user-form';
 @use 'partials/button';
+@use './settings';
 
 .App {
+	@include settings.background;
 	text-align: center;
 	display: flex;
 	flex-direction: row;
@@ -14,11 +16,6 @@
 	overflow-x: hidden;
 	width: 100%;
 	min-height: 100vh;
-	background-image: url('../assets/background.jpg');
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center;
-	background-size: cover;
 	box-sizing: border-box;
 }
 

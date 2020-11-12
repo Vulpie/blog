@@ -1,17 +1,36 @@
 /* Colors */
-$color__main: rgb(0, 153, 255);
-$color__main-hover: rgb(0, 119, 255);
-$color__text: rgb(8, 9, 73);
-$color__text-hover: rgb(8, 34, 73);
+$color__main: rgb(35, 36, 37);
+$color__main-alpha: rgba(35, 36, 37, 0.651);
+$color__main-hover: rgb(255, 255, 255);
+$color__text: rgb(212, 212, 212);
+$color__text-hover: rgb(0, 0, 0);
 
 /* Text */
 $text__title-font: 'Itim', cursive;
 
 /* Blocks */
+$block__main: 85%;
+$block__side: 15%;
 
 @mixin main-display {
-	width: 70%;
-	margin-left: 30%;
+	width: $block__main;
+	margin-left: $block__side;
 	margin-right: 0;
 	min-height: 90vh;
+}
+
+@mixin side-display {
+	width: $block__side;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+
+@mixin background {
+	background-image: url('../assets/background2.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
 }

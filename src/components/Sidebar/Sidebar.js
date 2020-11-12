@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { AuthContext } from '../../contexts/AuthContext'
-import LogoutButton from '../Partials/LogoutButton'
-import NavbarUserDisplay from '../Partials/NavbarUserDisplay'
+import LogoutButton from './LogoutButton'
+import NavbarUserDisplay from './NavbarUserDisplay'
 
 const Sidebar = () => {
 	const [links, setLinks] = useState([])
@@ -18,6 +18,7 @@ const Sidebar = () => {
 					}
 				})
 				setLinks(main_links)
+				console.log(main_links)
 			})
 
 		console.log(links)
@@ -54,10 +55,10 @@ const Sidebar = () => {
 					</>
 				) : (
 					<>
-						<Link to="/login" className="sidebar__user_login">
+						<Link to="/login" className="sidebar__user_link">
 							Login
 						</Link>
-						<Link to="/register" className="sidebar__user_login">
+						<Link to="/register" className="sidebar__user_link">
 							Register
 						</Link>
 					</>

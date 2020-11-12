@@ -16,7 +16,7 @@ const Post = ({ post }) => {
 				className="blog__post_title"
 			/>
 
-			<div
+			<p
 				dangerouslySetInnerHTML={{ __html: content.rendered }}
 				className="blog__post_content"
 			/>
