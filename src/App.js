@@ -2,7 +2,6 @@ import './style/App.scss'
 import Blog from './components/Blog/Blog'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Sidebar from './components/Sidebar/Sidebar'
-import Gallery from './components/Gallery/Gallery'
 import Page from './components/Page/Page'
 import Login from './components/Partials/Login'
 import Register from './components/Partials/Register'
@@ -21,9 +20,6 @@ function App() {
 						<Switch>
 							<Route path="/" exact>
 								<Blog />
-							</Route>
-							<Route path="/gallery" exact>
-								<Gallery />
 							</Route>
 							<Route path="/dashboard">
 								<Dashboard />

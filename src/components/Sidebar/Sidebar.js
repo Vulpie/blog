@@ -29,9 +29,6 @@ const Sidebar = () => {
 				<Link to="/" className="sidebar__navbar_link">
 					Blog
 				</Link>
-				<Link to="/gallery" className="sidebar__navbar_link">
-					Photo Gallery
-				</Link>
 				{links.length !== 0 ? (
 					links.map((page_details) => (
 						<Link
