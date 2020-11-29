@@ -1,5 +1,5 @@
 @use 'views/blog';
-@use 'partials/sidebar';
+@use 'partials/header';
 @use 'partials/loader';
 @use 'views/page';
 @use 'partials/user-form';
@@ -10,7 +10,7 @@
 	@include settings.background;
 	text-align: center;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	overflow-x: hidden;
@@ -19,7 +19,7 @@
 	box-sizing: border-box;
 }
 
-@include sidebar.sidebar;
+@include header.header;
 @include blog.blog-main;
 @include loader.loader;
 @include page.page-main;

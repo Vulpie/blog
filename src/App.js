@@ -1,7 +1,7 @@
 import './style/App.scss'
 import Blog from './components/Blog/Blog'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Sidebar from './components/Sidebar/Sidebar'
+import Header from './components/Header/Header'
 import Page from './components/Page/Page'
 import Login from './components/Partials/Login'
 import Register from './components/Partials/Register'
@@ -16,7 +16,7 @@ function App() {
 			<AuthContextProvider>
 				<UserContextProvider>
 					<Router>
-						<Sidebar />
+						<Header />
 						<Switch>
 							<Route path="/" exact>
 								<Blog />
